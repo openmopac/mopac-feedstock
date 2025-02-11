@@ -6,8 +6,8 @@ cmake -Bbuild -GNinja \
   ${CMAKE_ARGS} \
   -DCMAKE_BUILD_TYPE=Release \
   -DBLA_VENDOR=Generic \
-  -DGIT_HASH=OFF \
-  -DTESTS=OFF
+  -DGIT_HASH=OFF
 
 cmake --build build
 cmake --install build
+ctest -VV --parallel
